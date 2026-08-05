@@ -1,17 +1,39 @@
 aid: retro-biosciences
 name: Retro Biosciences
-description: 'Retro Biosciences is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Retro Biosciences is a Redwood City, California longevity biotechnology
+  company founded in 2021 whose stated mission is to add ten years to healthy human
+  lifespan. Its published preclinical pipeline spans RTR242, a small-molecule autophagy-flux
+  booster aimed at Alzheimer''s disease; RTR888, iPSC-derived microglial progenitors
+  for CNS conditions; RTR890, iPSC-derived hematopoietic stem cells for blood disorders;
+  AAV-delivered in vivo tissue reprogramming for osteoarthritis and age-related hearing
+  loss; and AI-designed protein therapeutics, the last built on a 2025 collaboration
+  with OpenAI on a protein-engineering model for reprogramming factors. Retro was
+  seeded with $180M from Sam Altman and reported a $1.8B valuation in 2026. It is
+  a therapeutics company rather than a software company: it operates a public GitHub
+  organization of internal lab-automation and bioinformatics tooling, but publishes
+  no API, SDK, developer portal or machine-readable contract of any kind.'
+image: https://www.retro.bio/opengraph-image.jpg
 url: https://raw.githubusercontent.com/api-evangelist/retro-biosciences/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-tier: profile
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Biotechnology
+- Life Sciences
+- Longevity
+- Aging
+- Therapeutics
+- Cell Therapy
+- Gene Therapy
+- Drug Discovery
+- Regenerative Medicine
+- Neuroscience
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/retro-biosciences-domain-security.yml
+- type: LLMsTxt
+  url: llms/retro-biosciences-llms.txt
 - type: Website
+  url: https://www.retro.bio/
+- type: About
+  url: https://www.retro.bio/science
+- type: Product
+  url: https://www.retro.bio/pipeline
+- type: Team
+  url: https://www.retro.bio/team
+- type: Blog
+  url: https://www.retro.bio/blog
+- type: Careers
+  url: https://www.retro.bio/careers
+- type: Contact
+  url: mailto:hi@retro.bio
+- type: GitHubOrganization
+  url: https://github.com/retrobiosciences
+- type: LinkedIn
+  url: https://www.linkedin.com/company/retro-biosciences
+- type: Twitter
+  url: https://twitter.com/RetroBio_
+- type: SecondaryMarket
   url: https://www.hiive.com/securities/retro-biosciences-stock
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Retro Biosciences is a preclinical therapeutics developer whose products
+    are drugs, not software; its entire published site is the seven URLs in its own
+    sitemap.xml (home, science, pipeline, team, careers, blog, one post), and api.,
+    developer. and docs.retro.bio are Vercel wildcard records that answer DEPLOYMENT_NOT_FOUND
+    rather than serving anything.
+  evidence:
+  - url: https://www.retro.bio/sitemap.xml
+    status: 200
+  - url: https://www.retro.bio/openapi.json
+    status: 404
+  - url: https://www.retro.bio/.well-known/agent-card.json
+    status: 404
+  - url: https://www.retro.bio/.well-known/security.txt
+    status: 404
+  - url: https://api.retro.bio/openapi.json
+    status: 404
+  - url: https://developer.retro.bio/
+    status: 404
+  - url: https://docs.retro.bio/
+    status: 404
+  - url: https://www.retro.bio/llms.txt
+    status: 404
+  checked: '2026-08-05'
