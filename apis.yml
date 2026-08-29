@@ -12,6 +12,17 @@ description: 'Retro Biosciences is a Redwood City, California longevity biotechn
   a therapeutics company rather than a software company: it operates a public GitHub
   organization of internal lab-automation and bioinformatics tooling, but publishes
   no API, SDK, developer portal or machine-readable contract of any kind.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.retro.bio/opengraph-image.jpg
 url: https://raw.githubusercontent.com/api-evangelist/retro-biosciences/refs/heads/main/apis.yml
 x-type: company
